@@ -1,4 +1,5 @@
 <script>
+  // load variables name and cdn from main.js
   export let name, cdn;
 </script>
 
@@ -7,6 +8,7 @@
     <img
       src="{cdn}/static/media/header_github_transparent.webp"
       alt="Github profile on a transparent background"
+      class="profile-image"
     />
     <h1>Welcome, I'm {name}!</h1>
     <p>
@@ -22,11 +24,12 @@
 </main>
 
 <style>
+  /* General styles */
   main {
-    text-align: left; /* Change this from center to left */
-    padding: 1em;
-    max-width: 800px;
     margin: 0 auto;
+    max-width: 800px;
+    padding: 1em;
+    text-align: left;
   }
 
   .container {
@@ -35,15 +38,19 @@
   }
 
   .content {
+    max-width: 50%;
     text-align: left;
-    max-width: 50%; /* Adjust this to change the width of the text block */
   }
 
-  img {
-    width: 100%;
+  /* Image styles */
+  .profile-image {
+    display: block;
     height: auto;
+    margin: 0 auto;
+    width: 50%;
   }
 
+  /* Text styles */
   h1 {
     color: #c9d1d9;
     font-size: 2em;
@@ -59,26 +66,21 @@
     color: #58a6ff;
   }
 
+  /* Button styles */
   button {
     background-color: #21262d;
-    color: #c9d1d9;
     border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
+    color: #c9d1d9;
+    cursor: pointer;
     display: inline-block;
     font-size: 16px;
     margin: 20px 2px;
-    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
   }
 
-  img {
-    width: 50%; /* Change this from 100% to 50% */
-    height: auto;
-    margin: 0 auto; /* Center the image */
-    display: block; /* Needed for margin: auto to work */
-  }
-
+  /* Media queries */
   @media (min-width: 640px) {
     main {
       max-width: none;
