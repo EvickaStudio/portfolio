@@ -5,7 +5,7 @@
 <main>
 	<img src="https://cdn.evickastudio.de/static/media/header_github_transparent.webp" alt="Header Image" />
 	<h1>Welcome, I'm {name}!</h1>
-	<p>I'm a software engineer specialized in frontend and backend development for complex scalable web apps. I write about software development on my blog. If you find my content useful, you can support me by following me on <a href="https://github.com/EvickaStudio">Github</a>.</p>
+	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti, animi obcaecati incidunt laudantium similique ut illo fuga cupiditate quis eaque ratione facilis eius inventore ab mollitia expedita aspernatur sunt? <a href="https://github.com/EvickaStudio">Github</a>.</p>
 	<button>Contact Me</button>
 </main>
 
