@@ -1,63 +1,89 @@
 <script>
-	export let name;
+  // load variables name and cdn from main.js
+  export let name, cdn;
 </script>
 
-<main>
-	<img src="https://cdn.evickastudio.de/static/media/header_github_transparent.webp" alt="Header Image" />
-	<h1>Welcome, I'm {name}!</h1>
-	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates corrupti, animi obcaecati incidunt laudantium similique ut illo fuga cupiditate quis eaque ratione facilis eius inventore ab mollitia expedita aspernatur sunt? <a href="https://github.com/EvickaStudio">Github</a>.</p>
-	<button>Contact Me</button>
+<main class="container">
+  <div class="content">
+    <img
+      src="{cdn}/static/media/header_github_transparent.webp"
+      alt="Github profile on a transparent background"
+      class="profile-image"
+    />
+    <h1>Welcome, I'm {name}!</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
+      dignissimos adipisci voluptatem, enim quidem quam iure praesentium soluta
+      voluptatibus quis aliquid atque voluptatum laudantium delectus, hic fuga
+      reprehenderit, velit deserunt. <a href="https://github.com/EvickaStudio"
+        >Github</a
+      >.
+    </p>
+    <button>Click</button>
+  </div>
 </main>
 
 <style>
-	body {
-		background-color: #0d1117;
-		color: #c9d1d9;
-	}
+  /* General styles */
+  main {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 1em;
+    text-align: left;
+  }
 
-	main {
-		text-align: center;
-		padding: 2em;
-		max-width: 800px;
-		margin: 0 auto;
-	}
+  .container {
+    display: flex;
+    justify-content: center;
+  }
 
-	img {
-		width: 100%;
-		height: auto;
-	}
+  .content {
+    max-width: 50%;
+    text-align: left;
+  }
 
-	h1 {
-		color: #c9d1d9;
-		font-size: 2em;
-		font-weight: 600;
-	}
+  /* Image styles */
+  .profile-image {
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    width: 50%;
+  }
 
-	p {
-		font-size: 1em;
-		line-height: 1.6;
-	}
+  /* Text styles */
+  h1 {
+    color: #c9d1d9;
+    font-size: 2em;
+    font-weight: 600;
+  }
 
-	a {
-		color: #58a6ff;
-	}
+  p {
+    font-size: 1em;
+    line-height: 1.6;
+  }
 
-	button {
-		background-color: #21262d;
-		color: #c9d1d9;
-		border: none;
-		padding: 10px 20px;
-		text-align: center;
-		text-decoration: none;
-		display: inline-block;
-		font-size: 16px;
-		margin: 20px 2px;
-		cursor: pointer;
-	}
+  a {
+    color: #58a6ff;
+  }
 
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  /* Button styles */
+  button {
+    background-color: #21262d;
+    border: none;
+    color: #c9d1d9;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  /* Media queries */
+  @media (min-width: 640px) {
+    main {
+      max-width: none;
+    }
+  }
 </style>
