@@ -19,7 +19,7 @@
         >Github</a
       >.
     </p>
-    <button>Touch me</button>
+    <button>Click</button>
   </div>
 </main>
 
