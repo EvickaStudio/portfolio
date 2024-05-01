@@ -51,7 +51,8 @@
       name: "Evicka Studio",
       description:
         "A very simple Cloudflare R2 file explorer build using Python and PyQT6 ",
-      imageUrl: "https://github.com/EvickaStudio/r2-explorer/raw/main/assets/image.png",
+      imageUrl:
+        "https://github.com/EvickaStudio/r2-explorer/raw/main/assets/image.png",
       githubUrl: "https://github.com/EvickaStudio/r2-explorer",
       badges: [
         {
@@ -176,7 +177,6 @@
     margin: 0 auto 20px;
     width: 20%;
     padding-bottom: 10px;
-
   }
 
   /* Text styles */
