@@ -20,7 +20,8 @@
       name: "ByteFM Downloader",
       description:
         "This simple Python script enables you to download the high-quality ByteFM livestream and save it as an MP3 file. ",
-      imageUrl: "https://cdn.evickastudio.de/static/media/bytefm_cover.webp",
+      imageUrl:
+        "https://cdn.evickastudio.de/static/media/bytefm_cover_big.webp",
       githubUrl: "https://github.com/EvickaStudio/ByteFM-Livestream-Downloader",
       badges: [
         {
@@ -30,21 +31,38 @@
       ],
     },
     {
-      name: "TODO",
+      name: "24Fire RestAPI",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dignissimos adipisci voluptatem, enim quidem quam iure praesentium soluta voluptatibus quis aliquid atque voluptatum laudantium delectus, hic fuga reprehenderit, velit deserunt.",
-      imageUrl:
-        "https://cdn.evickastudio.de/static/media/logo_evickastudio_big.webp",
-      githubUrl: "https://github.com/EvickaStudio",
+        "A simple API wrapper for the 24Fire Rest API to control basic functions of a KVM server.\n'Wir sind ein prepaid-basierter Hosting-Anbieter, vertreten im NTT Rechenzentrum Frankfurt am Main mit modernen AMD EPYC KVM-Servern und im Skylink Rechenzentrum in Eygelshoven mit preiswerten Intel Xeon und leistungsstarken AMD Ryzen KVM-Servern. '",
+      imageUrl: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
+      githubUrl: "https://github.com/EvickaStudio/24-Fire-REST-API",
       badges: [
-        // {
-        //   icon: "https://cdn.evickastudio.de/static/media/svelte_icon.svg",
-        //   label: "SvelteKit",
-        // },
-        // {
-        //   icon: "https://cdn.evickastudio.de/static/media/tailwindcss_icon.svg",
-        //   label: "Tailwind CSS",
-        // },
+        {
+          icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+          label: "Python",
+        },
+        {
+          icon: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
+          label: "PyPI",
+        },
+      ],
+    },
+    {
+      name: "Evicka Studio",
+      description:
+        "A very simple Cloudflare R2 file explorer build using Python and PyQT6 ",
+      imageUrl:
+        "https://github.com/EvickaStudio/r2-explorer/raw/main/assets/image.png",
+      githubUrl: "https://github.com/EvickaStudio/r2-explorer",
+      badges: [
+        {
+          icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+          label: "Python",
+        },
+        {
+          icon: "https://pypi.org/static/images/logo-small.8998e9d1.svg",
+          label: "PyPI",
+        },
       ],
     },
   ];
@@ -59,13 +77,13 @@
   ];
 </script>
 
-<aside class="sidebar">
+<!-- <aside class="sidebar">
   <ul>
     {#each contents as item}
       <li><a href={`#${item.id}`}>{item.title}</a></li>
     {/each}
   </ul>
-</aside>
+</aside> -->
 
 <main class="main-content">
   <div class="content">
@@ -73,6 +91,11 @@
       src="{cdn}/static/media/logo_evickastudio_big.webp"
       alt="Evicka Studio Logo"
       class="profile-image"
+    />
+    <img
+      src="{cdn}/static/media/evickastudio_pic.svg"
+      alt="Evicka Studio Logo2"
+      class="profile-dump"
     />
     <h1 id="welcome">Welcome, I'm {name}!</h1>
     <p id="about">
@@ -143,7 +166,16 @@
     display: block;
     height: auto;
     margin: 0 auto 20px;
-    width: 50%;
+    width: 80%;
+    padding-bottom: 10px;
+  }
+
+  .profile-dump {
+    max-width: 10%;
+    display: block;
+    height: auto;
+    margin: 0 auto 20px;
+    width: 20%;
     padding-bottom: 10px;
   }
 
@@ -177,38 +209,22 @@
     text-decoration: none;
   }
 
-  /* Adjusted Sidebar Styles */
-  .sidebar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: auto; /* Adjust width to fit content */
-    height: auto; /* Adjust height to fit content */
-    background-color: #121212;
-    padding: 20px;
-    border: 4px; /* Add border similar to the text box */
-    border-radius: 4px; /* Add border radius for rounded corners */
-    margin: 20px; /* Add some margin to separate from the edge */
-  }
-
-  .sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .sidebar ul li a {
-    text-decoration: none;
-    color: #ffffff;
-  }
-
   .main-content {
-    margin-left: 110px; /* Increase margin to ensure content does not overlap with sidebar */
+    margin-left: 10px; /* Increase margin to ensure content does not overlap with sidebar */
   }
 
-  /* Media queries */
-  @media (min-width: 640px) {
-    main {
-      max-width: none;
+  .content,
+  .projects-section {
+    padding: 10px; /* Adjust content padding */
+  }
+
+  .profile-image {
+    width: 50%; /* Adjust logo size for mobile */
+  }
+
+  @media (max-width: 768px) {
+    .project {
+      max-width: 100%; /* Full width on smaller screens */
     }
   }
 
@@ -219,10 +235,11 @@
   }
 
   .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px 0;
+    grid-template-columns: 1fr; /* Stack projects on mobile */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between projects */
+    justify-content: center; /* Center projects horizontally */
   }
 
   .project {
@@ -231,23 +248,30 @@
     padding: 15px;
     border-radius: 4px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    min-width: 280px; /* Minimum width of each project */
+    max-width: 45%; /* Maximum width to allow 2 projects per row on wider screens */
+    flex: 1; /* Allows the box to grow to fill available space */
   }
 
   .project img {
-    max-width: 100%;
+    max-width: 100%; /* Ensure image does not exceed its container */
     height: auto;
+    object-fit: cover; /* Cover the entire container */
     border-radius: 4px;
   }
 
-  .project h3 {
-    margin-top: 10px;
-    font-size: 1.25em;
+  @media (max-width: 902px) {
+    .project img {
+      width: 100%; /* Full width on smaller screens */
+      height: auto; /* Adjust height automatically */
+    }
   }
 
+  /* Optional: Adjust text size for better fit */
+  .project h3,
   .project p {
     font-size: 1em;
-    line-height: 1.6;
-    margin-top: 10px;
   }
 
   .project a {
