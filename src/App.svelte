@@ -88,23 +88,23 @@
 <main class="main-content">
   <div class="content">
     <img
-      src="{cdn}/static/media/logo_evickastudio_big.webp"
+      src="{cdn}/static/media/header_logo.svg"
       alt="Evicka Studio Logo"
       class="profile-image"
     />
-    <img
+    <!-- <img
       src="{cdn}/static/media/evickastudio_pic.svg"
       alt="Evicka Studio Logo2"
       class="profile-dump"
-    />
-    <h1 id="welcome">Welcome, I'm {name}!</h1>
+    /> -->
+    <h1 id="welcome">Hi there 👋, I'm {name}!</h1>
     <p id="about">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-      dignissimos adipisci voluptatem, enim quidem quam iure praesentium soluta
-      voluptatibus quis aliquid atque voluptatum laudantium delectus, hic fuga
-      reprehenderit, velit deserunt. <a href="https://github.com/EvickaStudio"
-        >Github</a
-      >.
+      I'm a Computer Science and Software Engineering student based in Germany.
+      I have a passion for learning new programming languages, exploring code
+      design principles, and integrating various services and techniques into my
+      projects. My personal projects often involve automation and user interface
+      design. Additionally, I enjoy contributing to and using open-source
+      projects. Visit me on <a href="https://github.com/EvickaStudio">Github</a>.
     </p>
     <button>Click</button>
   </div>
@@ -160,14 +160,15 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
-  /* Image styles */
   .profile-image {
-    max-width: 100%;
+    max-width: 20%;
     display: block;
     height: auto;
-    margin: 0 auto 20px;
-    width: 80%;
-    padding-bottom: 10px;
+    margin: 0 0 50px 0; /* Increase bottom margin */
+    width: 100%;
+    padding-bottom: 20px;
+    position: sticky; /* Make the image sticky */
+    top: 0; /* Stick to the top of the container */
   }
 
   .profile-dump {
