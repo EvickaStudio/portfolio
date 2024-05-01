@@ -1,3 +1,237 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+main {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.content {
+    max-width: 80%;
+    margin: auto;
+    /* background-color: #fff; */
+    padding: 20px;
+    /* border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
+}
+
+.content p {
+    border: 1px solid #3b3b3b;
+    border-radius: 4px;
+    background-color: #1c1c1c;
+    padding: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    max-width: 20%;
+    display: block;
+    height: auto;
+    margin: 0 0 50px 0;
+    /* Increase bottom margin */
+    width: 100%;
+    padding-bottom: 20px;
+    position: sticky;
+    /* Make the image sticky */
+    top: 0;
+    /* Stick to the top of the container */
+}
+
+/* Text styles */
+h1 {
+    color: #c9d1d9;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+a {
+    color: #58a6ff;
+}
+
+/* Button styles */
+button {
+    background-color: #1c1c1c;
+    border: none;
+    color: #c9d1d9;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 2px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.main-content {
+    margin-left: 10px;
+    /* Increase margin to ensure content does not overlap with sidebar */
+}
+
+.content,
+.projects-section {
+    padding: 10px;
+    /* Adjust content padding */
+}
+
+.profile-image {
+    width: 50%;
+    /* Adjust logo size for mobile */
+}
+
+@media (max-width: 768px) {
+    .project {
+        max-width: 100%;
+        /* Full width on smaller screens */
+    }
+}
+
+.projects-section {
+    padding: 20px;
+    /* background-color: #2a2a2a; */
+    color: #c9d1d9;
+}
+
+.projects-grid {
+    grid-template-columns: 1fr;
+    /* Stack projects on mobile */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Space between projects */
+    justify-content: center;
+    /* Center projects horizontally */
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.project {
+    animation:
+        1s ease-in 0s 1 slideInFromBottom,
+        1s ease-in 0s 1 fadeIn;
+    opacity: 0;
+    transform: translateY(100%);
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+    border: 1px solid #3b3b3b;
+    background-color: #1c1c1c;
+    padding: 15px;
+}
+
+.project:hover {
+    transform: translateY(0) scale(1.05);
+    box-shadow:
+        0 10px 20px rgba(0, 0, 0, 0.19),
+        0 6px 6px rgba(0, 0, 0, 0.23);
+    border-color: #9af3a7;
+}
+
+.project.animate-on-scroll {
+    animation:
+        1s ease-in 0s 1 slideInFromBottom,
+        1s ease-in 0s 1 fadeIn;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project {
+    border: 1px solid #3b3b3b;
+    background-color: #1c1c1c;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    min-width: 280px;
+    /* Minimum width of each project */
+    max-width: 45%;
+    /* Maximum width to allow 2 projects per row on wider screens */
+    flex: 1;
+    /* Allows the box to grow to fill available space */
+}
+
+.project img {
+    max-width: 100%;
+    /* Ensure image does not exceed its container */
+    height: auto;
+    object-fit: cover;
+    /* Cover the entire container */
+    border-radius: 4px;
+}
+
+@media (max-width: 902px) {
+    .project img {
+        width: 100%;
+        /* Full width on smaller screens */
+        height: auto;
+        /* Adjust height automatically */
+    }
+}
+
+/* Optional: Adjust text size for better fit */
+.project h3,
+.project p {
+    font-size: 1em;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #58a6ff;
+    text-decoration: none;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #1c1c1c;
+    padding: 4px 8px;
+    /* Padding around text */
+    margin-right: 5px;
+    /* Space between badges */
+    border: 1px solid #3b3b3b;
+    border-radius: 4px;
+    /* Rounded corners for the badge box */
+}
+
+.badge-icon {
+    width: 1em;
+    /* Make icon size relative to text size */
+    height: 1em;
+    /* Make icon size relative to text size */
+    margin-right: 5px;
+    /* Space between icon and label */
+}
+
+.badge-label {
+    font-size: 1em;
+    /* Match text size with surrounding content */
+}
