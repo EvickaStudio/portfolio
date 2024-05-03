@@ -1,6 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+    /* Light theme colors */
+    --background-color: #fff;
+    --text-color: #1c1c1c;
+    --border-color: #3b3b3b;
+    --project-background-color: #f0f0f0;
+    --button-background-color: #e0e0e0;
+    --link-color: #58a6ff;
+}
+
+.dark-mode {
+    /* Dark theme colors */
+    --background-color: #1c1c1c;
+    --text-color: #c9d1d9;
+    --border-color: #565656;
+    --project-background-color: #2a2a2a;
+    --button-background-color: #333;
+    --link-color: #79c0ff;
+}
 
 main {
     margin-left: 250px;
@@ -37,6 +56,12 @@ main {
     /* Make the image sticky */
     top: 0;
     /* Stick to the top of the container */
+    will-change: filter;
+    transition: filter 300ms;
+}
+
+.profile-image:hover {
+    filter: drop-shadow(0 0 2em #9a7fa7);
 }
 
 /* Text styles */
@@ -44,12 +69,25 @@ h1 {
     color: #c9d1d9;
     font-size: 2em;
     font-weight: 600;
+    /* will-change: filter;
+    transition: filter 300ms; */
 }
+
+/* 
+h1:hover {
+    filter: drop-shadow(0 0 2em #9af3a7);
+} */
 
 p {
     font-size: 1em;
     line-height: 1.6;
+    /* will-change: filter;
+    transition: filter 300ms; */
 }
+
+/* p:hover {
+    filter: drop-shadow(0 0 4em #9af3a7);
+} */
 
 a {
     color: #58a6ff;
@@ -133,28 +171,47 @@ button {
 
 .project {
     animation: 1s ease-in 0s 1 slideInFromBottom,
-    1s ease-in 0s 1 fadeIn;
+        1s ease-in 0s 1 fadeIn;
     opacity: 0;
     transform: translateY(100%);
-    transition: transform 0.3s ease,
-    opacity 0.3s ease,
-    box-shadow 0.3s ease,
-    border-color 0.3s ease;
+    /* Ensure transitions for both transform and other properties are smooth */
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
     border: 1px solid #3b3b3b;
     background-color: #1c1c1c;
     padding: 15px;
+    will-change: filter;
+    transition: filter 300ms;
 }
 
+
 .project:hover {
-    transform: translateY(0) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
-    0 6px 6px rgba(0, 0, 0, 0.23);
+    /* Correctly apply both translateY and scale transformations */
+    transform: translateY(-1px) scale(1.05);
+    /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19),
+                0 6px 6px rgba(0, 0, 0, 0.23); */
     border-color: #9af3a7;
+    filter: drop-shadow(0 0 2em #9af3a7);
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .project.animate-on-scroll {
     animation: 1s ease-in 0s 1 slideInFromBottom,
-    1s ease-in 0s 1 fadeIn;
+        1s ease-in 0s 1 fadeIn;
     opacity: 1;
     transform: translateY(0);
 }
