@@ -61,7 +61,7 @@
                     <p>{project.description}</p>
                     <div class="badges">
                         {#each project.badges as badge}
-                            <div class="badge">
+                        <div class="badge" style="border-color: {badge.color ? badge.color : '#3b3b3b'};">
                                 <img
                                         src={badge.icon}
                                         alt={badge.label}

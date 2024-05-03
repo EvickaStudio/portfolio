@@ -10,6 +10,14 @@ export let projects = [
                 icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
                 label: "Python",
             },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "LLMs"
+            },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "RestAPI",
+            },
         ],
     },
     {
@@ -24,23 +32,31 @@ export let projects = [
                 icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
                 label: "Python",
             },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "PyQT6",
+            },
         ],
     },
     {
         name: "24Fire RestAPI",
         description:
             "A simple API wrapper for the 24Fire Rest API to control basic functions of a KVM server.",
-        imageUrl: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
+        imageUrl: "https://cdn.evickastudio.de/static/media/24fire_cover.webp",
         githubUrl: "https://github.com/EvickaStudio/24-Fire-REST-API",
         badges: [
             {
                 icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
                 label: "Python",
             },
-            // {
-            //   icon: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
-            //   label: "PyPI",
-            // },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "PyPI",
+            },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "RestAPI",
+            },
         ],
     },
     {
@@ -55,92 +71,101 @@ export let projects = [
                 icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
                 label: "Python",
             },
-            // {
-            //   icon: "https://pypi.org/static/images/logo-small.8998e9d1.svg",
-            //   label: "PyPI",
-            // },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "PyQT6",
+            },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "S3",
+            },
         ],
     },
     {
-        name: "Lorem Ipsum",
+        name: "Portfolio Website",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisl",
-        imageUrl: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
-        githubUrl: "https://github.com/EvickaStudio",
+            "The current website you are looking at. It is build using Svelte and TailwindCSS.",
+        imageUrl: "https://cdn.evickastudio.de/static/media/header_logo.svg",
+        githubUrl: "https://github.com/EvickaStudio/portfolio",
+        badges: [
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "JavaScript",
+            },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "Svelte",
+            },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "TailwindCSS",
+            },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "HTML",
+            },
+        ],
+    },
+    {
+        name: "Edwin Rosen Bot",
+        description: "A Python-based notification bot for Edwin Rosen concerts, monitoring their ticket RestAPI for updates.",
+        imageUrl: "https://cdn.evickastudio.de/static/media/edwinrosen_cover.webp",
+        githubUrl: "https://github.com/EvickaStudio/edwin-rosen-bot",
+        badges: [
+            {
+                "icon": "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                "label": "Python"
+            }
+        ]
+    },
+    {
+        name: "Spoti-Key",
+        description:
+            "Spoti-Key is a Python application that adds the currently playing song on Spotify to your liked songs. It uses the Spotify Web API via the Spotipy library and can be executed via a hotkey on your keyboard. ",
+        imageUrl: "https://cdn.evickastudio.de/static/media/spotikey_cover.webp",
+        githubUrl: "https://github.com/EvickaStudio/Spoti-Key",
         badges: [
             {
                 icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
                 label: "Python",
             },
+            {
+                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
+                label: "SpotifyAPI",
+            }
         ],
     },
     {
-        name: "Lorem Ipsum",
+        name: " Moodle-API",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisl",
-        imageUrl: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
-        githubUrl: "https://github.com/EvickaStudio",
+            "A Python-based API wrapper designed for streamlined interaction with Moodle platforms. Handles authentication, session management, and basic data retrieval. ",
+        imageUrl: "https://cdn.evickastudio.de/static/media/moodle_cover.svg",
+        githubUrl: "https://github.com/EvickaStudio/Moodle-API",
         badges: [
             {
                 icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
                 label: "Python",
             },
-        ],
-    },
-    {
-        name: "Lorem Ipsum",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisl",
-        imageUrl: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
-        githubUrl: "https://github.com/EvickaStudio",
-        badges: [
             {
                 icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
-                label: "Python",
+                label: "RestAPI",
             },
         ],
     },
     {
-        name: "Lorem Ipsum",
+        name: "Groq-Chat",
         description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisl",
+            "A very simple wrapper for the GROQ chat completion API. ",
         imageUrl: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
-        githubUrl: "https://github.com/EvickaStudio",
+        githubUrl: "https://github.com/EvickaStudio/Groq-Chat",
         badges: [
             {
-                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
-                label: "Python",
+                icon: "https://cdn.evickastudio.de/static/media/moodle_cover.svg",
+                label: "Public archive",
+                color: "#9e6a03",
             },
         ],
     },
-    {
-        name: "Lorem Ipsum",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisl",
-        imageUrl: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
-        githubUrl: "https://github.com/EvickaStudio",
-        badges: [
-            {
-                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
-                label: "Python",
-            },
-        ],
-    },
-    {
-        name: "Lorem Ipsum",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac nisl",
-        imageUrl: "https://cdn.evickastudio.de/static/media/evickastudio_pic.svg",
-        githubUrl: "https://github.com/EvickaStudio",
-        badges: [
-            {
-                icon: "https://cdn.evickastudio.de/static/media/python_icon.svg",
-                label: "Python",
-            },
-        ],
-    },
-
-
 ];
 
 export let blogs = [
