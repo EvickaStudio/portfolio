@@ -1,20 +1,38 @@
-html, body {
+html {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-color: #191919;
+	background-color: #1c1c1c;
+	/* background-image: radial-gradient(circle, #9af3a7, #1c1c1c); */
 }
 
 body {
+	position: relative;
+	width: 100%;
+	height: 100%;
 	color: #838383;
 	margin: 0;
 	padding: 8px;
 	box-sizing: border-box;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	z-index: 1;
+	/* Add this line */
 }
 
+/* body::before {
+/* 	content: "";
+/* 	position: absolute;
+/* 	top: 0;
+/* 	left: 0;
+/* 	width: 100%;
+/* 	height: 30%; /* Adjust this value to change the height of the gradient */
+/* 	background-color: #1c1c1c;
+/* 	background-image: linear-gradient(0deg, #1c1c1c 67%, #9af3a7 100%);
+/* 	z-index: -1;
+/* } */
+
 a {
-	color: rgb(0,100,200);
+	color: rgb(0, 100, 200);
 	text-decoration: none;
 }
 
@@ -23,14 +41,17 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: rgb(0, 80, 160);
 }
 
 label {
 	display: block;
 }
 
-input, button, select, textarea {
+input,
+button,
+select,
+textarea {
 	font-family: inherit;
 	font-size: inherit;
 	-webkit-padding: 0.4em 0;

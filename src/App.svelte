@@ -28,8 +28,7 @@
     export let name, cdn;
 
     import {projects} from "./Data.js";
-    import { blogs } from './Data.js'; // Assume you have a blogs array similar to projects
-
+    // import { blogs } from './Data.js';
 </script>
 
 <main class="main-content">
@@ -77,6 +76,7 @@
             {/each}
         </div>
     </section>
+
     <!-- <section id="blog" class="blog-section">
         <h2>Blog</h2>
         <div class="blog-grid">
@@ -94,10 +94,15 @@
         <h2>Contact Me</h2>
         <p>Feel free to reach out through any of the platforms below.</p>
         <ul>
-            <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+            <!-- <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li> -->
             <li>GitHub: <a href="https://github.com/EvickaStudio" target="_blank">EvickaStudio</a></li>
-            <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your Profile</a></li>
+            <li>Github: evickastudio</li>
             <!-- Add more social links here -->
         </ul>
     </section>
+<!-- 
+    imclude link in the name like this [EvickaStudio](https://github.com/EvickaStudio). -->
+    <footer style="text-align: center;">
+        <p>Designed and developed with ❤️ by <a href="https://github.com/EvickaStudio" target="_blank">EvickaStudio</a></p>
+    </footer>
 </main>

@@ -79,6 +79,7 @@ h1:hover {
 } */
 
 p {
+    color: #c9d1d9c9;
     font-size: 1em;
     line-height: 1.6;
     /* will-change: filter;
@@ -250,8 +251,11 @@ button {
 }
 
 /* Optional: Adjust text size for better fit */
-.project h3,
+.project h3 {
+    font-size: 1em;
+}
 .project p {
+    color: #c9d1d9c9;
     font-size: 1em;
 }
 
