@@ -64,7 +64,7 @@ export let projects = [
         description:
             "A very simple Cloudflare R2 file explorer build using Python and PyQT6 ",
         imageUrl:
-            "https://github.com/EvickaStudio/r2-explorer/raw/main/assets/image.png",
+            "https://cdn.evickastudio.de/static/media/r2_cover.webp",
         githubUrl: "https://github.com/EvickaStudio/r2-explorer",
         badges: [
             {
