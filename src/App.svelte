@@ -1,6 +1,7 @@
 <script>
     import {onMount} from "svelte";
     import "./app.css";
+    
 
     onMount(() => {
         const observer = new IntersectionObserver(
@@ -27,6 +28,8 @@
     export let name, cdn;
 
     import {projects} from "./Data.js";
+    import { blogs } from './Data.js'; // Assume you have a blogs array similar to projects
+
 </script>
 
 <main class="main-content">
@@ -46,9 +49,6 @@
             projects.
         </p>
         <!-- Button for my github -->
-        <button>
-            <a href="https://github.com/EvickaStudio" target="_blank">GitHub</a>
-        </button>
     </div>
 
     <section id="projects" class="projects-section">
@@ -76,5 +76,28 @@
                 </div>
             {/each}
         </div>
+    </section>
+    <!-- <section id="blog" class="blog-section">
+        <h2>Blog</h2>
+        <div class="blog-grid">
+            {#each blogs as blog}
+                <div class="blog-post">
+                    <h3>{blog.title}</h3>
+                    <p>{blog.summary}</p>
+                    <a href={blog.readMoreUrl} target="_blank">Read More</a>
+                </div>
+            {/each}
+        </div>
+    </section> -->
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out through any of the platforms below.</p>
+        <ul>
+            <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li>
+            <li>GitHub: <a href="https://github.com/EvickaStudio" target="_blank">EvickaStudio</a></li>
+            <li>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">Your Profile</a></li>
+            <!-- Add more social links here -->
+        </ul>
     </section>
 </main>
