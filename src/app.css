@@ -23,9 +23,7 @@
 }
 
 /* Text styles */
-h1,
-h42,
-p {
+h1 {
     color: #c9d1d9;
     font-size: 2em;
 }
