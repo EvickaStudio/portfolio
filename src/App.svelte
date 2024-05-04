@@ -120,7 +120,7 @@
                     target="_blank">EvickaStudio</a
                 >
             </li>
-            <li>Github: evickastudio</li>
+            <li>Discord: evickastudio</li>
             <!-- Add more social links here -->
         </ul>
     </section>
