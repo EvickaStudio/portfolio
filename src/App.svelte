@@ -58,6 +58,9 @@
                     <img src={project.imageUrl} alt={project.name + " Image"}/>
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
+                    <p><span class="label">Type:</span> <span class="value">{project.projectType}</span></p>
+                    <p><span class="label">License:</span> <span class="value">{project.license}</span></p>
+                    <p><span class="label">Tags:</span> <span class="value">{project.tags.join(', ')}</span></p>
                     <div class="badges">
                         {#each project.badges as badge}
                         <div class="badge" style="border-color: {badge.color ? badge.color : '#3b3b3b'};">
