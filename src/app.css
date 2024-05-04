@@ -148,6 +148,19 @@ button {
     /* Center projects horizontally */
 }
 
+.label {
+    /* display: inline-block; */
+    margin-right: 5px;
+    color: #c9d1d9;
+    font-size: 1em;
+}
+
+/* .value {
+    display: inline-block;
+    color: #58a6ff;
+    font-size: 1em;
+} */
+
 @keyframes slideInFromBottom {
     0% {
         transform: translateY(100%);
