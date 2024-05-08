@@ -33,6 +33,7 @@ h42 {
     color: #9af3a7;
     font-size: 3em;
     font-weight: bold;
+    font-family: futura-pt,Tahoma,Geneva,Verdana,Arial,sans-serif;
 }
 
 p {
@@ -174,9 +175,13 @@ main {
 .projects-grid {
     grid-template-columns: 1fr;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    position: relative;
+    padding: auto;
+    margin: auto;
 }
 
 /* Badge styles */
