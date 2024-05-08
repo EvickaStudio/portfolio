@@ -3,61 +3,68 @@
 @tailwind utilities;
 
 :root {
-    /* Light theme colors */
-    --background-color: #fff;
-    --text-color: #1c1c1c;
-    --border-color: #3b3b3b;
-    --project-background-color: #f0f0f0;
-    --button-background-color: #e0e0e0;
-    --link-color: #58a6ff;
-}
-
-.dark-mode {
     /* Dark theme colors */
     --background-color: #1c1c1c;
     --text-color: #c9d1d9;
-    --border-color: #565656;
-    --project-background-color: #2a2a2a;
-    --button-background-color: #333;
-    --link-color: #79c0ff;
+    --border-color: #3b3b3b;
+    --link-color: #58a6ff;
+    --hover-color: #9af3a7;
+    --gradient-color: #453289;
 }
 
-/* body {
-    border-radius: 4px;
-    /* background-color: #1c1c1c; */
-    /* linear gradiend */
-    /*background: linear-gradient(0deg, #1c1c1c 0%, #b91d1d 100%);
-/* } 
+/* Retro theme colors */
+:root.retro {
+    --background-color: #e0d0aa;
+    --text-color: #8146b9;
+    --border-color: #ff8a71;
+    --link-color: #58a6ff;
+    --hover-color: #ff7e6a;
+    --gradient-color: #ff7e6a;
+}
+
+/* Light theme colors */
+:root.light {
+    --background-color: #c283a5;
+    --text-color: #000a8b;
+    --border-color: #776bb4;
+    --link-color: #58a6ff;
+    --hover-color: #82c5fe;
+    --gradient-color: #6964b6;
+}
+
+body {
+    background-color: var(--background-color);
+} 
 
 /* Text styles */
 h1 {
-    color: #c9d1d9;
+    color: var(--text-color);
     font-size: 2em;
 }
 
 h42 {
     animation: fadeIn 2s;
-    color: #9af3a7;
+    color: var(--hover-color);
     font-size: 3em;
     font-weight: bold;
     font-family: futura-pt,Tahoma,Geneva,Verdana,Arial,sans-serif;
 }
 
 p {
-    color: #c9d1d9c9;
+    color: var(--text-color);
     font-size: 1em;
     line-height: 1.6;
 }
 
 a {
-    color: #58a6ff;
+    color: var(--link-color)
 }
 
 /* Button styles */
 button {
-    background-color: #1c1c1c;
+    background-color: var(--background-color);
     border: none;
-    color: #c9d1d9;
+    color: var(--text-color);
     cursor: pointer;
     display: inline-block;
     font-size: 16px;
@@ -84,16 +91,16 @@ main {
 
 .content {
     margin: auto;
-    background-color: #1c1c1c;
+    background-color: var(--background-color);
     border-radius: 8px;
     padding: 50px;
-    background: linear-gradient(0deg, #1c1c1c 0%, #453289 100%);
+    background: linear-gradient(0deg, var(--background-color) 0%, var(--gradient-color) 100%);
 }
 
 .content p {
-    border: 1px solid #3b3b3b;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
-    background-color: #1c1c1c;
+    background-color: var(--background-color);
     padding: 10px;
     margin-top: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -128,8 +135,8 @@ main {
     transform: translateY(100%);
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease,
         box-shadow 0.3s ease, border-color 0.3s ease;
-    border: 1px solid #3b3b3b;
-    background-color: #1c1c1c;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
     padding: 15px;
     will-change: filter;
     transition: filter 300ms;
@@ -143,8 +150,8 @@ main {
 
 .project:hover {
     transform: translateY(-1px) scale(1.05);
-    border-color: #9af3a7;
-    filter: drop-shadow(0 0 2em #9af3a7);
+    border-color: var(--hover-color);
+    filter: drop-shadow(0 0 2em var(--hover-color));
 }
 
 .project.animate-on-scroll {
@@ -165,20 +172,20 @@ main {
 }
 
 .project p {
-    color: #c9d1d9c9;
+    color: var(--text-color-light);
     font-size: 1em;
 }
 
 .project a {
     display: inline-block;
     margin-top: 10px;
-    color: #58a6ff;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 .projects-section {
     padding: 20px;
-    color: #c9d1d9;
+    color: var(--text-color);
 }
 
 .projects-grid {
@@ -197,10 +204,10 @@ main {
 .badge {
     display: inline-flex;
     align-items: center;
-    background-color: #1c1c1c;
+    background-color: var(--background-color);
     padding: 4px 8px;
     margin-right: 5px;
-    border: 1px solid #3b3b3b;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
 }
 
@@ -217,7 +224,7 @@ main {
 /* Label for Type: etc. of the project */
 .label {
     margin-right: 5px;
-    color: #c9d1d9;
+    color: var(--text-color);
     font-size: 1em;
 }
 

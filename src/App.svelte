@@ -28,7 +28,20 @@
 
     import { projects } from './Data.js';
     // import { blogs } from './Data.js';
+
+    let currentTheme = 'dark'; // default theme
+    
+    const themes = ['dark', 'retro', 'light'];
+    
+    function toggleTheme() {
+        const currentThemeIndex = themes.indexOf(currentTheme);
+        const nextThemeIndex = (currentThemeIndex + 1) % themes.length;
+        currentTheme = themes[nextThemeIndex];
+        document.documentElement.className = currentTheme;
+    }
 </script>
+
+
 
 <main class="main-content">
     <div class="content">
@@ -135,3 +148,7 @@
         </p>
     </footer>
 </main>
+
+<button on:click={toggleTheme}>
+    <button on:click={toggleTheme}>Change Theme</button>
+</button>
