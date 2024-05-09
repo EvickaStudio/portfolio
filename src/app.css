@@ -5,6 +5,7 @@
 :root {
     /* Dark theme colors */
     --background-color: #1c1c1c;
+    --background-color-trans: #1c1c1c4b;
     --text-color: #c9d1d9;
     --border-color: #3b3b3b;
     --link-color: #58a6ff;
@@ -34,7 +35,12 @@
 
 body {
     background-color: var(--background-color);
-} 
+}
+
+/* .profile-image {
+    border: 2px double var(--hover-color);
+    border-radius: 4px;
+} */
 
 /* Text styles */
 h1 {
@@ -47,7 +53,7 @@ h42 {
     color: var(--hover-color);
     font-size: 3em;
     font-weight: bold;
-    font-family: futura-pt,Tahoma,Geneva,Verdana,Arial,sans-serif;
+    font-family: futura-pt, Tahoma, Geneva, Verdana, Arial, sans-serif;
 }
 
 p {
@@ -57,7 +63,7 @@ p {
 }
 
 a {
-    color: var(--link-color)
+    color: var(--link-color);
 }
 
 /* Button styles */
@@ -94,16 +100,22 @@ main {
     background-color: var(--background-color);
     border-radius: 8px;
     padding: 50px;
-    background: linear-gradient(0deg, var(--background-color) 0%, var(--gradient-color) 100%);
+    background: linear-gradient(
+        0deg,
+        var(--background-color) 0%,
+        var(--gradient-color) 100%
+    );
 }
 
 .content p {
     border: 1px solid var(--border-color);
     border-radius: 4px;
-    background-color: var(--background-color);
+    background-color: var(--background-color-trans);
     padding: 10px;
     margin-top: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.5px);
+    -webkit-backdrop-filter: blur(1.5px);
 }
 
 /* Profile image styles */
@@ -232,6 +244,10 @@ main {
 @media (max-width: 768px) {
     .project {
         max-width: 100%;
+    }
+    .badge-icon {
+        width: 0.75em;
+        height: 0.75em;
     }
 }
 
