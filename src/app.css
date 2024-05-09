@@ -8,6 +8,7 @@
     --background-color-trans: #1c1c1c4b;
     --text-color: #c9d1d9;
     --border-color: #3b3b3b;
+    --border-color-trans: #3b3b3b65;
     --link-color: #58a6ff;
     --hover-color: #9af3a7;
     --gradient-color: #453289;
@@ -108,7 +109,7 @@ main {
 }
 
 .content p {
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--border-color-trans);
     border-radius: 4px;
     background-color: var(--background-color-trans);
     padding: 10px;
