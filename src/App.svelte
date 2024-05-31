@@ -126,7 +126,7 @@
         <h2>Contact Me</h2>
         <p>Feel free to reach out through any of the platforms below.</p>
         <ul>
-            <!-- <li>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></li> -->
+            <li>Email: <a href="mailto:hello@evicka.de">hello@evicka.de</a></li>
             <li>
                 GitHub: <a
                     href="https://github.com/EvickaStudio"
@@ -134,11 +134,8 @@
                 >
             </li>
             <li>Discord: evickastudio</li>
-            <!-- Add more social links here -->
         </ul>
     </section>
-    <!-- 
-    imclude link in the name like this [EvickaStudio](https://github.com/EvickaStudio). -->
     <footer style="text-align: center;">
         <p>
             Designed and developed with ❤️ by <a
